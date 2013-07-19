@@ -2,7 +2,7 @@
 #include "Adafruit_WS2801.h"
 
 
-int SNARE = 0;
+char SNARE = '0';
 
 /*****************************************************************************
 Example sketch for driving Adafruit WS2801 pixels!
@@ -64,7 +64,6 @@ void setup() {
 void loop() {
   while (Serial.available()) {
     int in = Serial.read(); 
-      Serial.println(in);
     if(in == SNARE) {  
       intelTracer(15);
     }
